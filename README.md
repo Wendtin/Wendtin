@@ -130,7 +130,7 @@ My hands-on experience spans the full security spectrum — from offensive penet
 
 **Open to full-time, part-time, and internship opportunities in cybersecurity and IT security.**
 
-📍 New York City &nbsp;·&nbsp; 📧 Available on request &nbsp;·&nbsp; 🔗 [LinkedIn](https://linkedin.com/in/wendtin)
+📍 New York City &nbsp;·&nbsp; 📧 Available on request &nbsp;·&nbsp; https://www.linkedin.com/in/wend-tin-basile-sam-35b70199/
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,100:1a1a2e&height=100&section=footer" />
 
