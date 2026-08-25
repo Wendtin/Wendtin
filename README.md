@@ -107,10 +107,10 @@ My hands-on experience spans the full security spectrum — from offensive penet
 | Credential | Institution | Status |
 |---|---|---|
 | 🏫 TKH Innovation Fellowship — Cybersecurity | The Knowledge House, NYC | ✅ 2026 |
-| 🎓 B.S. Computer Science & Information Security (GPA 3.73) | John Jay College, CUNY | ✅ Completed |
+| 🎓 B.S. Computer Science & Information Security | John Jay College, CUNY | ✅ Completed |
 | 🎓 A.S. Computer Science | BMCC, CUNY | ✅ Completed |
 | 💼 Cybersecurity Tech Fellow (Paid) | CodePath | ✅ Completed |
-| ☁️ AWS SimuLearn Labs | AWS Skill Builder | 🔄 In Progress |
+| ☁️ AWS SimuLearn Labs | AWS Skill Builder | ✅ Completed |
 
 ---
 
