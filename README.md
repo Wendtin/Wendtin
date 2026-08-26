@@ -17,18 +17,11 @@
 I'm a **New York City-based Cloud Security & Cybersecurity Specialist** completing the **TKH Innovation Fellowship 2026** and pursuing a **B.S. in Computer Science & Information Security** at John Jay College, CUNY (GPA 3.73 · Dean's List).
 
 My technical expertise spans **Cloud Security Engineering, DevSecOps pipelines, offensive penetration testing, SIEM log analysis, and digital forensics**. I design secure Infrastructure as Code (IaC), build keyless CI/CD pipelines, hunt threats across AWS CloudTrail and Athena logs, and perform full-lifecycle incident response mapped to compliance frameworks like **NIST CSF**.
-```markdown
+
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:16213e&height=200&section=header&text=Wend%20Tin%20Basile%20Sam&fontSize=40&fontColor=58a6ff&fontAlignY=38&desc=Cloud%20Security%20%7C%20DevSecOps%20%7C%20Penetration%20Testing%20%7C%20DFIR&descSize=16&descColor=8b949e&descAlignY=58" />
 </div>
 
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/wendtin)
-[![Portfolio](https://img.shields.io/badge/Lab%20Portfolio-View%20My%20Work-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Wendtin/My-Portfolio)
-[![John Jay CUNY](https://img.shields.io/badge/GPA%203.73-Dean's%20List-003087?style=for-the-badge&logo=academia&logoColor=white)](#)
-
-</div>
 
 ---
 
@@ -39,14 +32,12 @@ I'm a **New York City-based Cloud Security & Cybersecurity Specialist** completi
 My technical expertise spans **Cloud Security Engineering, DevSecOps pipelines, offensive penetration testing, SIEM log analysis, and digital forensics**. I design secure Infrastructure as Code (IaC), build keyless CI/CD pipelines, hunt threats across AWS CloudTrail and Athena logs, and perform full-lifecycle incident response mapped to compliance frameworks like **NIST CSF**.
 
 
-```
 
 🎯 Target Roles  →  Cloud Security Engineer · DevSecOps Engineer · SOC / Security Analyst · Junior Penetration Tester
 📍 Location      →  New York City, NY
 🎓 Education     →  B.S. Computer Science & Information Security — John Jay College, CUNY
 🏆 GPA            →  3.73  |  Dean's List
 
-```
 
 ---
 
@@ -163,4 +154,3 @@ My technical expertise spans **Cloud Security Engineering, DevSecOps pipelines, 
 
 </div>
 
-```
