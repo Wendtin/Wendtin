@@ -18,19 +18,6 @@ I'm a **New York City-based Cloud Security & Cybersecurity Specialist** completi
 
 My technical expertise spans **Cloud Security Engineering, DevSecOps pipelines, offensive penetration testing, SIEM log analysis, and digital forensics**. I design secure Infrastructure as Code (IaC), build keyless CI/CD pipelines, hunt threats across AWS CloudTrail and Athena logs, and perform full-lifecycle incident response mapped to compliance frameworks like **NIST CSF**.
 
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:16213e&height=200&section=header&text=Wend%20Tin%20Basile%20Sam&fontSize=40&fontColor=58a6ff&fontAlignY=38&desc=Cloud%20Security%20%7C%20DevSecOps%20%7C%20Penetration%20Testing%20%7C%20DFIR&descSize=16&descColor=8b949e&descAlignY=58" />
-</div>
-
-
----
-
-## 👋 About Me
-
-I'm a **New York City-based Cloud Security & Cybersecurity Specialist** completing the **TKH Innovation Fellowship 2026** and pursuing a **B.S. in Computer Science & Information Security** at John Jay College, CUNY (GPA 3.73 · Dean's List).
-
-My technical expertise spans **Cloud Security Engineering, DevSecOps pipelines, offensive penetration testing, SIEM log analysis, and digital forensics**. I design secure Infrastructure as Code (IaC), build keyless CI/CD pipelines, hunt threats across AWS CloudTrail and Athena logs, and perform full-lifecycle incident response mapped to compliance frameworks like **NIST CSF**.
-
 
 
 🎯 Target Roles  →  Cloud Security Engineer · DevSecOps Engineer · SOC / Security Analyst · Junior Penetration Tester
