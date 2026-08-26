@@ -1,143 +1,122 @@
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:16213e&height=200&section=header&text=Wend%20Tin%20Basile%20Sam&fontSize=40&fontColor=58a6ff&fontAlignY=38&desc=Cloud%20Security%20%7C%20DevSecOps%20%7C%20Penetration%20Testing%20%7C%20DFIR&descSize=16&descColor=8b949e&descAlignY=58" />
-</div>
+# Wend Tin Basile Sam
 
-<div align="center">
+**Cloud Security Engineer** &nbsp;·&nbsp; New York, NY
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/wendtin)
-[![Portfolio](https://img.shields.io/badge/Lab%20Portfolio-View%20My%20Work-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Wendtin/My-Portfolio)
-[![John Jay CUNY](https://img.shields.io/badge/GPA%203.73-Dean's%20List-003087?style=for-the-badge&logo=academia&logoColor=white)](#)
+I build AWS environments as code and then attack them to find out where they hold.
+Terraform-defined infrastructure, CI/CD that reaches AWS without a stored credential,
+and incident response that starts by preserving evidence instead of rebooting the box.
 
-</div>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wend-tin-basile-sam-35b70199/)
+[![Email](https://img.shields.io/badge/Email-sw.basile14%40gmail.com-505050?style=flat-square&logo=maildotru&logoColor=white)](mailto:sw.basile14@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Lab%20Portfolio-24%2B%20writeups-238636?style=flat-square&logo=github&logoColor=white)](https://github.com/Wendtin/My-Portfolio)
 
----
-
-## 👋 About Me
-
-I'm a **New York City-based Cloud Security & Cybersecurity Specialist** completing the **TKH Innovation Fellowship 2026** and pursuing a **B.S. in Computer Science & Information Security** at John Jay College, CUNY (GPA 3.73 · Dean's List).
-
-My technical expertise spans **Cloud Security Engineering, DevSecOps pipelines, offensive penetration testing, SIEM log analysis, and digital forensics**. I design secure Infrastructure as Code (IaC), build keyless CI/CD pipelines, hunt threats across AWS CloudTrail and Athena logs, and perform full-lifecycle incident response mapped to compliance frameworks like **NIST CSF**.
-
-
-
-🎯 Target Roles  →  Cloud Security Engineer · DevSecOps Engineer · SOC / Security Analyst · Junior Penetration Tester
-📍 Location      →  New York City, NY
-🎓 Education     →  B.S. Computer Science & Information Security — John Jay College, CUNY
-🏆 GPA            →  3.73  |  Dean's List
-
+**Currently** — TKH Innovation Fellowship 2026, Cloud Security track · CompTIA Security+ in progress
+**Open to** — Cloud Security Engineer · DevSecOps Engineer · SOC Analyst
 
 ---
 
-## 🛠️ Technical Skills
+## Selected work
 
-<table>
-<tr>
-<td valign="top" width="50%">
+**[TLAB9-Breach](https://github.com/Wendtin/TLAB9-Breach) — cloud incident response, end to end**
+An unauthorised EC2 instance appears in the account. I built the audit trail that could answer
+who launched it (CloudTrail into S3, queried through Athena), contained it with a zero-rule
+security group so the instance stayed intact for forensics, then revoked the principal. The
+interesting failure mode: a fresh Glue table returns zero rows until `MSCK REPAIR TABLE`
+registers the partitions — the difference between "no evidence" and a complete trail.
+`CloudTrail` `Athena` `KMS` `EC2` `IAM`
 
-### ☁️ Cloud Security & DevSecOps
-- **Infrastructure as Code (IaC):** Terraform, SAST scanning with `tfsec`
-- **CI/CD Pipeline Security:** GitHub Actions workflow automation, keyless authentication via OpenID Connect (OIDC) federation
-- **AWS Monitoring & Logging:** GuardDuty, CloudTrail, AWS Config, VPC Flow Logs, Athena SQL log queries
-- **Cloud IR & Isolation:** Automated containment, Security Group isolation, SSM Session Manager
-- **Governance & Risk:** NIST Cybersecurity Framework (CSF) mapping, compliance reporting
+**[TLAB7-Forge](https://github.com/Wendtin/TLAB7-Forge) — secretless CI/CD with a security gate**
+GitHub Actions authenticates to AWS through OIDC federation, so there is no long-lived access
+key anywhere in the repository. `tfsec` runs before Terraform and fails the job on findings
+rather than reporting them afterwards — proven by committing a security group open to
+`0.0.0.0/0` and confirming the deploy stopped.
+`Terraform` `GitHub Actions` `OIDC` `tfsec` `IAM`
 
-</td>
-<td valign="top" width="50%">
-
-### 🔵 Defensive Security & SIEM
-- **SIEM & Monitoring:** ELK Stack (Elasticsearch · Logstash · Kibana)
-- **Threat Hunting:** KQL query writing, CloudTrail SQL analytics, IOC correlation
-- **IDS/IPS:** Suricata — custom signature authoring & rule tuning
-- **Host Security:** Sysmon log parsing, alert triage, UFW & iptables hardening
-- **Active Directory:** GPO management, PowerShell provisioning, Linux domain join (`realmd`/`sssd`)
-
-</td>
-</tr>
-<tr>
-<td valign="top" width="50%">
-
-### 🔴 Offensive Security
-- **Exploitation:** Metasploit Framework, CVE-based exploit execution
-- **Web App Attacks:** SQLi, XSS, CSRF, BOLA/IDOR, SSRF, Burp Suite, SQLmap
-- **Post-Exploitation:** Privilege escalation (LinPEAS, SUIDs, GTFOBins), persistence
-- **Pivoting & Recon:** SOCKS proxies, port forwarding, Nmap, Shodan, Nikto, OSINT
-
-</td>
-<td valign="top" width="50%">
-
-### ⚫ Digital Forensics & IR (DFIR)
-- **Disk & Memory Forensics:** Sleuth Kit (`fls`, `icat`), Autopsy, FTK Imager, Volatility
-- **Network Forensics:** Wireshark, tcpdump packet analysis
-- **Incident Response:** Attack timeline reconstruction, evidence chain-of-custody, executive incident reporting
-
-</td>
-</tr>
-</table>
+**[TLAB8-Fleet](https://github.com/Wendtin/TLAB8-Fleet) — container supply chain and least privilege**
+A non-root Alpine image pushed to ECR with scan-on-push enabled, audited by a Lambda function
+whose IAM policy I cut from `AdministratorAccess` down to `ecr:DescribeImages` on one repository
+ARN plus its own log stream. Re-running the function afterwards confirmed the reduction did not
+break the workload, which is the only way to know a least-privilege policy is correct rather
+than merely small.
+`Docker` `ECR` `Lambda` `Boto3` `IAM`
 
 ---
 
-## 🔬 Lab Portfolio Highlights
+## Toolbox
 
-> 📁 Full reports, methodology, and artifacts → **[My-Portfolio Repository](https://github.com/Wendtin/My-Portfolio)**
-
-| # | Lab | Domain | Key Tools | Outcome |
-|---|-----|--------|-----------|---------|
-| 16 | **AWS Cloud Threat Detection & Containment** | Cloud Security / IR | GuardDuty · CloudTrail · Athena · AWS Config | Triaged GuardDuty findings, queried logs via Athena SQL, and executed SG quarantine isolation |
-| 17 | **Keyless DevSecOps & IaC Pipeline** | DevSecOps | Terraform · GitHub Actions · OIDC · tfsec | Implemented OIDC keyless authentication and automated `tfsec` SAST checks in CI/CD |
-| 18 | **Cloud Executive Compliance Audit** | Cloud Governance | NIST CSF · AWS Infrastructure | Authored an executive board memo mapping AWS cloud architecture risks to NIST CSF controls |
-| 01 | **TEPP — The Final Reckoning** *(Capstone)* | Full Pentest + IR | Metasploit · Kali · Docker | 4-phase pentest across Docker networks with full incident response |
-| 02 | **Operation Phantom Pursuit** | SIEM / DFIR | ELK Stack · Sleuth Kit | Correlated SIEM logs with disk forensics to reconstruct and close incident |
-| 03 | **The Central Nervous System** | SIEM & Threat Hunting | Elasticsearch · Kibana · KQL | Deployed ELK SIEM; hunted host/network threats using custom KQL queries |
-| 04 | **The Digital Autopsy** | Memory & Disk Forensics | Volatility · Autopsy | Extracted malware artifacts and volatile memory indicators from image |
-| 05 | **The Tripwire** | IDS Engineering | Suricata | Authored custom rules to detect reverse shells, scans, and SQLi patterns |
-| 06 | **Operation Fortress** | Defense-in-Depth | UFW · iptables · Sysmon | Layered host hardening combining firewall filtering, IDS, and Sysmon event triage |
-| 07 | **The Invisible Logic** | API Security | Burp Suite · curl · Flask | Exploited BOLA/IDOR vulnerabilities in REST API to extract unauthorized data |
-| 08 | **The Poisoned Browser** | Web App Attacks | Burp Suite | Delivered stored XSS and CSRF payloads; documented full attack chain |
-| 09 | **The Verification Protocol** | CVE Exploitation | Metasploit · CVE-2007-2447 | Achieved RCE via Samba username map script vulnerability |
-| 10 | **The Deep Network** | Persistence & Pivoting | Metasploit SOCKS | Pivoted through internal network segments to access isolated Redis service |
-| 11 | **Operation Deep Pivot** | Post-Exploitation | Metasploit · Docker | Full offensive chain: initial access → priv esc → persistence → pivoting |
-| 12 | **Climbing the Ladder** | Linux Privilege Escalation | GTFOBins · LinPEAS | Exploited SUID binaries, sudo misconfigurations, and cron wildcard injection |
-| 13 | **Operation Omni-Portal** | Web App Pentesting | Burp Suite · SQLmap | Executed multi-vector attack (SQLi + XSS + BOLA); generated CVSS report |
-| 14 | **The Barricade** | Firewall Hardening | UFW · iptables | Built stateful firewall rulesets with documented network defense rationale |
-| 15 | **The Crime Scene** | DFIR Investigation | Autopsy · Sleuth Kit | Recovered deleted file system artifacts while maintaining strict chain of custody |
+| | |
+|---|---|
+| **AWS** | IAM · EC2 · VPC · S3 · Lambda · ECR · CloudTrail · CloudWatch · GuardDuty · Athena · Systems Manager · KMS · Config · Budgets |
+| **IaC & CI/CD** | Terraform · CloudFormation · GitHub Actions · tfsec · OIDC federation |
+| **Detection & SIEM** | ELK Stack · KQL · Suricata rule authoring · Sysmon · VPC Flow Logs |
+| **DFIR** | Autopsy · The Sleuth Kit · Volatility · FTK Imager · Wireshark · tcpdump |
+| **Offensive** | Metasploit · Burp Suite · sqlmap · nmap · LinPEAS · GTFOBins · SOCKS pivoting |
+| **Frameworks** | NIST CSF 2.0 · CIS Benchmarks · MITRE ATT&CK |
+| **Languages** | Python · Bash · HCL · SQL · PowerShell |
 
 ---
 
-## 🎓 Education & Credentials
+<details>
+<summary><b>Full lab portfolio</b> — 24 labs across cloud, detection, forensics, and offensive security</summary>
 
-| Credential | Institution / Platform | Status |
-|---|---|---|
-| 🏫 TKH Innovation Fellowship — Cybersecurity | The Knowledge House, NYC | ✅ 2026 |
-| 🎓 B.S. Computer Science & Information Security | John Jay College, CUNY | ✅ Completed (GPA 3.73 · Dean's List) |
-| 🎓 A.S. Computer Science | BMCC, CUNY | ✅ Completed |
-| ☁️ AWS SimuLearn Labs & Hands-on Architecture | AWS Skill Builder | ✅ Completed |
-| 💼 Cybersecurity Tech Fellow (Paid) | CodePath | ✅ Completed |
+<br>
+
+Reports, scripts, and evidence live in **[My-Portfolio](https://github.com/Wendtin/My-Portfolio)**.
+
+**Cloud security & DevSecOps**
+
+| Lab | What I built |
+|---|---|
+| Budgeted Identity | AWS Budget alerts, S3, IAM role and EC2 defined entirely in Terraform |
+| The Castle Walls | Two-tier VPC as code — public and private subnets with corrected routing |
+| The Wiretap | VPC Flow Logs into CloudWatch, then a threat hunt across the captured traffic |
+| Zero Trust Terminal | EC2 administration with no SSH and no open port 22, via Session Manager |
+| Monitored Fortress | Terraform VPC + Flow Logs + zero-trust access combined |
+| The Quality Inspector | SAST gate in GitHub Actions; a public-ACL S3 bucket fails `tfsec`, then is remediated with KMS encryption, versioning, public access block, and logging |
+| The Traveler's Guide | Keyless OIDC federation from GitHub Actions to AWS |
+| Executive Risk Translation | AWS service inventory mapped to NIST CSF 2.0 functions, written up for a non-technical board |
+
+**Detection engineering & DFIR**
+
+| Lab | What I built |
+|---|---|
+| The Central Nervous System | ELK SIEM deployment; host and network threat hunting with custom KQL |
+| The Tripwire | Suricata signatures detecting reverse shells, scans, and SQLi patterns |
+| Operation Fortress | Layered host defence — UFW, iptables, and Sysmon event triage |
+| The Barricade | Stateful firewall rulesets with documented defence rationale |
+| The Crime Scene | Disk forensics with Autopsy and Sleuth Kit; deleted-artifact recovery under chain of custody |
+| The Digital Autopsy | Memory forensics with Volatility; malware artifact and volatile IOC extraction |
+| Operation Phantom Pursuit | SIEM logs correlated with disk forensics to reconstruct and close an incident |
+
+**Offensive security**
+
+| Lab | What I built |
+|---|---|
+| TEPP — The Final Reckoning *(capstone)* | Four-phase pentest and incident response across segmented Docker networks |
+| Operation Omni-Portal | Multi-vector web attack (SQLi + XSS + BOLA) with a CVSS-scored report |
+| The Invisible Logic | BOLA/IDOR exploitation against a REST API to extract unauthorised records |
+| The Poisoned Browser | Stored XSS and CSRF payload delivery; full attack chain documented |
+| The Verification Protocol | RCE via the Samba username map script vulnerability (CVE-2007-2447) |
+| Climbing the Ladder | Linux privilege escalation — SUID binaries, sudo misconfiguration, cron wildcard injection |
+| The Deep Network | Metasploit SOCKS pivoting into an isolated internal Redis service |
+| Operation Deep Pivot | Initial access → privilege escalation → persistence → pivoting |
+
+**Networking**
+
+Cisco Packet Tracer labs covering VLANs, routing, and access control lists.
+
+</details>
 
 ---
 
-## 📂 Featured Projects
+## Background
 
-**☁️ AWS Cloud Security & DevSecOps Suite**
-> Implemented automated security checks into Infrastructure as Code (Terraform) using `tfsec` within GitHub Actions. Built keyless AWS IAM authentication via OpenID Connect (OIDC). Configured Amazon GuardDuty and Athena SQL querying across CloudTrail logs for rapid threat triage and automated isolation.
-> → [github.com/Wendtin/My-Portfolio](https://github.com/Wendtin/My-Portfolio)
+| | |
+|---|---|
+| **B.S. Computer Science & Information Security** | John Jay College, CUNY — GPA 3.73, Dean's List |
+| **A.S. Computer Science** | BMCC, CUNY |
+| **TKH Innovation Fellowship 2026** | The Knowledge House, NYC — Cloud Security track |
+| **Cybersecurity Tech Fellow** | CodePath (paid) — taught cybersecurity labs |
+| **AWS Cloud Practitioner Essentials** | AWS Skill Builder — 13 modules, 9 SimuLearn labs |
 
-**🔐 TKH Cybersecurity Lab Portfolio**
-> 18+ documented hands-on labs covering Cloud Security, DevSecOps, offensive pentesting, SIEM, and DFIR. Each lab includes executable scripts, technical reports, and artifact evidence.
-> → [github.com/Wendtin/My-Portfolio](https://github.com/Wendtin/My-Portfolio)
-
-**🌐 COLIB — Community Library Web App**
-> Live community library web application built and hosted in a cloud environment.
-> → [amber-tidy-ferret-151.vscodeedu.app](https://amber-tidy-ferret-151.vscodeedu.app)
-
----
-
-<div align="center">
-
-**Open to full-time opportunities in Cloud Security, DevSecOps, SOC Analysis, and Cybersecurity Engineering.**
-
-📍 New York City &nbsp;·&nbsp; 📧 Available on request &nbsp;·&nbsp; [LinkedIn Profile](https://www.linkedin.com/in/wend-tin-basile-sam-35b70199/)
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,100:1a1a2e&height=100&section=footer" />
-
-</div>
-
+Bilingual: English / French.
