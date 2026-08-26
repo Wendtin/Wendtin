@@ -6,7 +6,7 @@ I build AWS environments as code and then attack them to find out where they hol
 Terraform-defined infrastructure, CI/CD that reaches AWS without a stored credential,
 and incident response that starts by preserving evidence instead of rebooting the box.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wend-tin-basile-sam-35b70199/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wend-tin-basile-sam/)
 [![Email](https://img.shields.io/badge/Email-sw.basile14%40gmail.com-505050?style=flat-square&logo=maildotru&logoColor=white)](mailto:sw.basile14@gmail.com)
 [![Portfolio](https://img.shields.io/badge/Lab%20Portfolio-24%2B%20writeups-238636?style=flat-square&logo=github&logoColor=white)](https://github.com/Wendtin/My-Portfolio)
 
